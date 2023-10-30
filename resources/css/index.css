@@ -2,6 +2,11 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container-fluid {
     padding: 0.5rem 7%;
 }
@@ -18,3 +23,71 @@ body {
   background: linear-gradient(96deg, #e537b9 0%, #c040df 100%);
 }
 
+.accordion-item {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.accordion-header {
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.accordion-button-custom {
+  background-color: transparent;
+  border: none;
+}
+
+.collapsed svg{
+  transform: rotate(-90deg);
+}
+
+.accordion-button-custom svg{
+  transition: all 200ms;
+}
+
+.news-board {
+  display: flex;
+  position: relative;
+}
+
+.news-board-control {
+  position: absolute;
+  border: none;
+  backdrop-filter: blur(20px);
+  height: 100%;
+  width: 1.2rem;
+  border-radius: 10px;
+  background-color: var(--gray-gray-100, #F6F8FA);
+}
+.news-board-control span {
+  position: relative;
+  height: 1rem;
+}
+
+.news-board-control-left {
+  z-index: 1;
+  left: 0;
+}
+.news-board-control-left span {
+  left: -0.8rem;
+}
+
+.news-board-control-right {
+  z-index: 1;
+  right: 0;
+}
+.news-board-control-right span {
+  left: -0.8rem;
+}
+
+.news-board-img {
+  padding: 0 1.5rem;
+  min-width: 100%;
+  max-height: 30rem;
+  object-fit: cover;
+  transition: all 200ms;
+}
+.news-board-img:hover {
+  filter: brightness(50%);
+}
